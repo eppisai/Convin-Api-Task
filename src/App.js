@@ -42,7 +42,7 @@ function App() {
 
   return (
     <>
-      <ToastContainer autoClose={5000} closeOnClickrtl={true} />
+      <ToastContainer closeOnClickrtl={true} />
       <HeroUser/>
 
       {userSLoaded ? (

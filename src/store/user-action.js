@@ -18,13 +18,15 @@ export const fetchAllUsers = () => {
             toast.update(id, {
                 render: `data fetched`,
                 type: "success",
-                isLoading: false
+                isLoading: false,
+                autoClose: 500
               });
         } catch (err) {
             toast.update(id, {
                 render: err,
                 type: "error",
-                isLoading: false
+                isLoading: false,
+                autoClose: 500
               });      
         }
     };
@@ -47,13 +49,15 @@ export const fetchCurrentUser = (userId) => {
             toast.update(id, {
                 render: `user data fetched`,
                 type: "success",
-                isLoading: false
+                isLoading: false,
+                autoClose: 500
               });
         } catch (err) {
             toast.update(id, {
                 render: err,
                 type: "error",
-                isLoading: false
+                isLoading: false,
+                autoClose: 500
               });      
         }
     };
