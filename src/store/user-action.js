@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 export const fetchAllUsers = () => {
     const id = toast.loading("fetching data from API")
     return async (dispatch) => {
-        const fetchHandler = async (action) => {
+        const fetchHandler = async () => {
             const res = await fetch(
                 "https://reqres.in/api/users"
             )
@@ -18,15 +18,13 @@ export const fetchAllUsers = () => {
             toast.update(id, {
                 render: `data fetched`,
                 type: "success",
-                isLoading: false,
-                autoClose:500,
+                isLoading: false
               });
         } catch (err) {
             toast.update(id, {
                 render: err,
                 type: "error",
-                isLoading: false,
-                autoClose:500,
+                isLoading: false
               });      
         }
     };
@@ -49,15 +47,13 @@ export const fetchCurrentUser = (userId) => {
             toast.update(id, {
                 render: `user data fetched`,
                 type: "success",
-                isLoading: false,
-                autoClose:500,
+                isLoading: false
               });
         } catch (err) {
             toast.update(id, {
                 render: err,
                 type: "error",
-                isLoading: false,
-                autoClose:500,
+                isLoading: false
               });      
         }
     };
