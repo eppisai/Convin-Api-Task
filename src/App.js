@@ -7,7 +7,6 @@ import Card from "./components/Card";
 import HeroUser from "./components/HeroUser";
 import "react-toastify/dist/ReactToastify.css";
 import { fetchAllUsers } from "./store/user-action";
-import "./App.css";
 
 const responsive = {
   superLargeDesktop: {
