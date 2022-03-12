@@ -35,7 +35,7 @@ function App() {
     dispatch(fetchAllUsers());
   }
   const users = useSelector((state) => state.users.allUsers);
-  const userSLoaded = useSelector((state) => state.users.usersloaded);
+  const usersLoaded = useSelector((state) => state.users.usersloaded);
   useEffect(() => {
     setOnload(true);
   }, []);
@@ -45,7 +45,7 @@ function App() {
       <ToastContainer closeOnClickrtl={true} />
       <HeroUser/>
 
-      {userSLoaded ? (
+      {usersLoaded ? (
         <Carousel responsive={responsive}>
           {users.map((user) => {
             return (
